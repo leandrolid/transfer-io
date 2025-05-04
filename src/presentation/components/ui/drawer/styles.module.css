@@ -1,0 +1,38 @@
+.overlay {
+  background-color: var(--black-a9);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.content {
+  background-color: var(--gray-1);
+  border-radius: 6px;
+  box-shadow: var(--shadow-6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90vw;
+  max-width: 25rem;
+  height: 100vh;
+  padding: var(--space-4);
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  color: var(--gray-11);
+  cursor: pointer;
+  transition: color 150ms ease-in-out;
+  margin: 0;
+
+  &:hover {
+    color: var(--gray-12);
+  }
+}

@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: transfer-db
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: transfer
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "9888:5432"
